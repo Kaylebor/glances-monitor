@@ -1,0 +1,20 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Kaylebor"
+      }
+    ],
+    "Category": "System Information",
+    "Description": "Live status of a remote machine from its Glances REST API",
+    "Icon": "network-server",
+    "Id": "codes.ender.glances",
+    "License": "GPL-2.0-or-later",
+    "Name": "Glances Monitor",
+    "Version": "1.0.0",
+    "Website": "https://github.com/Kaylebor/glances-monitor",
+    "BugReportUrl": "https://github.com/Kaylebor/glances-monitor/issues"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

@@ -1,0 +1,15 @@
+# Build output
+/dist/
+*.plasmoid
+
+# QML tooling caches
+.qmlls.ini
+*.qmlc
+*.jsc
+.cache/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~

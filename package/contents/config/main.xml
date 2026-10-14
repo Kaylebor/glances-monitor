@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <entry name="apiUrl" type="String">
+      <default>http://localhost:61208/api/4</default>
+    </entry>
+    <entry name="dashboardUrl" type="String">
+      <default></default>
+    </entry>
+    <entry name="label" type="String">
+      <default></default>
+    </entry>
+    <entry name="interval" type="Int">
+      <default>5</default>
+      <min>2</min>
+      <max>60</max>
+    </entry>
+    <!-- Comma-separated, in order: cpu, mem, load, temp, net -->
+    <entry name="panelMetrics" type="String">
+      <default>cpu,mem</default>
+    </entry>
+  </group>
+  <group name="Sections">
+    <entry name="showCpu" type="Bool"><default>true</default></entry>
+    <entry name="showPerCore" type="Bool"><default>true</default></entry>
+    <entry name="showMem" type="Bool"><default>true</default></entry>
+    <entry name="showSwap" type="Bool"><default>true</default></entry>
+    <entry name="showLoad" type="Bool"><default>true</default></entry>
+    <entry name="showFs" type="Bool"><default>true</default></entry>
+    <entry name="showDiskio" type="Bool"><default>false</default></entry>
+    <entry name="showNet" type="Bool"><default>false</default></entry>
+    <entry name="showSensors" type="Bool"><default>true</default></entry>
+    <entry name="showGpu" type="Bool"><default>false</default></entry>
+    <entry name="showContainers" type="Bool"><default>false</default></entry>
+    <entry name="showAmps" type="Bool"><default>true</default></entry>
+    <!-- Comma-separated glob patterns; empty shows everything -->
+    <entry name="fsFilter" type="String"><default>/</default></entry>
+    <entry name="diskFilter" type="String"><default></default></entry>
+    <entry name="netFilter" type="String"><default></default></entry>
+    <entry name="sensorFilter" type="String"><default></default></entry>
+  </group>
+  <group name="Amps">
+    <entry name="hiddenAmps" type="StringList">
+      <default></default>
+    </entry>
+    <!-- Regex an AMP result must match to count as healthy; empty uses Glances' process count -->
+    <entry name="ampOkPattern" type="String">
+      <default></default>
+    </entry>
+    <!-- Remove the matched text from the displayed result (e.g. a leading "active ") -->
+    <entry name="ampStripMatch" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+</kcfg>
