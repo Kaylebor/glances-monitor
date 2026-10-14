@@ -8,6 +8,8 @@ AMPs, coloured by Glances' own alert thresholds.
 One widget instance watches one server; add it several times for several
 machines.
 
+![Popup showing CPU, load, RAM, swap, root file system, sensors and an AMP line](docs/popup.png)
+
 ## Features
 
 - **Panel view**: an icon plus the metrics you pick (CPU %, RAM used, load,
