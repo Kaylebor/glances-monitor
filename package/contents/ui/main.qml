@@ -506,12 +506,17 @@ PlasmoidItem {
                     color: healthy ? Kirigami.Theme.positiveTextColor : Kirigami.Theme.negativeTextColor
                     elide: Text.ElideRight
                     Layout.preferredWidth: Kirigami.Units.gridUnit * 5
+                    Layout.alignment: Qt.AlignTop
                 }
                 PlasmaComponents3.Label {
                     text: root.ampText(modelData)
+                    // long results (e.g. player lists) wrap; elide only past 3 lines
+                    wrapMode: Text.Wrap
+                    maximumLineCount: 3
                     elide: Text.ElideRight
                     opacity: 0.85
                     Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignTop
                     PlasmaComponents3.ToolTip.text: text
                     PlasmaComponents3.ToolTip.visible: truncated && hoverHandler.hovered
                     HoverHandler {
